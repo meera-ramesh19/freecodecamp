@@ -1,0 +1,166 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!--
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding!
+
+- The freeCodeCamp Team
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Hello World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+  <div class="header">
+
+    <h1 id="title"> freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+  </div>
+
+  <form id="survey-form">
+    <fieldset>
+      <div class="form-group">
+        <label for="name" id="name-label">Name </label>
+        <input class="heighttext" type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      </div>
+      <div class="form-group">
+        <label for="email" id="email-label">Email</label>
+        <input class="heighttext" type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      </div>
+      <div class="form-group">
+        <label for="number" id="number-label">Age(optional)</label>
+        <input class="heighttext" type="number" id="number" name="age" placeholder="Age" min="10" max="99">
+
+      </div>
+      <div class="form-group">
+        <p>Which option best describes your current role?</p>
+        <select id="dropdown" name="roles" required>
+          <option value="Select current role" disabled selected>Select current role</option>
+          <option value="Student">Student</option>
+          <option value="Job">Full time job</option>
+          <option value="Learner ">Full time Learner</option>
+          <option value="Nosay">Prefer Not to Say</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>Would you recommend freeCodeCamp to a friend?</p>
+        <label for="rbutton1">
+          <input class="heighttext" type="radio" name="recommend" value="definitely" id="rbutton1">
+          Definitely</label>
+        <!-- </div>
+  <div> -->
+        <label for="rbutton2">
+          <input class="heighttext" type="radio" name="recommend" id="rbutton2" value="maybe">
+          Maybe</label>
+        <!-- </div>
+    <div> -->
+        <label for="rbutton3">
+          <input class="heighttext" type="radio" name="recommend" id="rbutton3" value="sure">
+          Sure</label>
+        <!-- </div>- -->
+      </div>
+
+      <div class="form-group">
+        <p>What is your favorite feature of freeCodeCamp?</p>
+
+        <select id="features" name="features" required>
+          <option value="Select an option" disabled selected>Select an option</option>
+          <option value="Challenges">Challenges</option>
+          <option value="Projects">Projects</option>
+          <option value="Community">Community</option>
+          <option value="OpenSource">Open Source</option>
+        </select>
+      </div>
+      <div class="form-group">
+
+        <p>What would you like to see improved?
+          <span> (Check all that apply)</span>
+        </p>
+        <label for="chbutton1">
+          <input type="checkbox" name="improved" id="chbutton1" value="Front-end-projects">
+          Front-end Projects</label>
+        <!-- </div>
+<div> -->
+        <label for="chbutton2">
+          <input type="checkbox" name="improved" id="chbutton2" value="Back-end-projects">
+          Back-end Projects</label>
+        <!-- </div>
+<div> -->
+        <label for="chbutton3">
+          <input type="checkbox" name="improved" id="chbutton3" value="Data-Visualization">
+          Data Visualization</label>
+        <!-- </div>
+ <div> -->
+        <label for="chbutton4">
+          <input type="checkbox" name="improved" id="chbutton4" value="Challenges">
+          Challenges</label>
+        <!-- </div>
+  <div> -->
+        <label for="chbutton5">
+          <input type="checkbox" name="improved" id="chbutton5" value="  Open Source Community">
+          Open Source Community</label>
+        <!-- </div>
+   <div> -->
+        <label for="chbutton6">
+          <input type="checkbox" name="improved" id="chbutton6" value="Gitter help rooms">
+          Gitter help rooms</label>
+        <!-- </div>
+
+      <div> -->
+        <label for="chbutton7">
+          <input type="checkbox" name="improved" id="chbutton7" value="Videos">
+          Videos</label>
+        <!-- </div>
+       <div> -->
+        <label for="chbutton8">
+          <input type="checkbox" name="improved" id="chbutton8" value="City meetups">
+          City Meetups</label>
+        <!-- </div>
+         <div> -->
+        <label for="chbutton9">
+          <input type="checkbox" name="improved" id="chbutton9" value="Wiki">
+          Wiki</label>
+        <!-- </div>
+        <div> -->
+        <label for="chbutton10">
+          <input type="checkbox" name="improved" id="chbutton10" value="Forum">
+          Forum</label>
+        <!-- </div>
+         <div> -->
+        <label for="chbutton11">
+          <input type="checkbox" name="improved" id="chbutton11" value="Additional courses">
+          Additional Courses</label>
+      </div>
+
+      <div class="form-group">
+        <p>Any comments or suggestions?
+        <p>
+          <textarea id="comments" name="comments" rows="5" maxwid="100" placeholder="Enter your comment here....">
+            </textarea>
+          <!-- <label for="comments">Any comments or suggestions?</label> -->
+      </div>
+      <div class="form-group">
+        <button type="submit" id="submit"> Submit</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+<script></script>
+</body>
+
+</html>

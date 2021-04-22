@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+#body-width {
+  max-width: 50%;
+  justify-content: center;
+  margin: auto;
+}
+nav {
+  font-size: 2rem;
+  background: seagreen;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+li a {
+  padding: 50px;
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: blue;
+}
+#title {
+  text-align: center;
+  font-size: 3rem;
+  color: maroon;
+  padding: 5% 0 0 0%;
+}
+p {
+  font-size: 2rem;
+  text-align: center;
+}
+#header {
+  background: #f0f0f0;
+}
+#img-div {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background: white;
+  display: flex;
+}
+#image {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-size: 2rem;
+  padding-top: 20%;
+}
+#about,
+#math,
+#awards,
+#books {
+  padding: 10% 0 3% 0;
+  font-size: 3rem;
+  text-decoration: none;
+  text-align: left;
+}
+p {
+  text-align: left;
+}
+#fact-section {
+  display: flex;
+  padding-top: 5%;
+  align-items: center;
+}
+#tribute-info {
+  text-align: left;
+  font-size: 2rem;
+  flex-direction: column;
+}
+#title-head {
+  text-align: center;
+  padding-bottom: 5%;
+}
+blockquote {
+  padding-top: 5%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.author {
+  text-align: right;
+  font-weight: bold;
+}
+@media only screen and (max-width: 500px) {
+  .nav-bar,
+  .nav-links {
+    display: block;
+    width: 100%;
+  }
+}
