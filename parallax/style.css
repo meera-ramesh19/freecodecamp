@@ -1,0 +1,23 @@
+.container{
+max-width:1200px;
+margin:0 auto;
+background:#ccc;
+font-size:24px;
+color:white;
+padding:25px;
+}
+/* .parallax{
+background:url('ghoulash.jpg') no-repeat center;
+background-site:cover;
+background-attachment:fixed;
+height:500px;
+} */
+.parallax {
+  padding:100px 35px;
+    min-height: 500px;
+    background: transparent;
+}
+.info{
+  z-index:2;
+  position:relative;
+}
