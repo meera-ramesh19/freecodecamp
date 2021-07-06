@@ -1,0 +1,26 @@
+body{
+  background:#e6fff2;
+}
+main{
+  display:flex;
+}
+
+.container{
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  margin:120px auto;
+  background: #ffffcc;
+  padding:3rem;
+}
+h1, .value{
+  display:block;
+  text-align: center;
+  padding:1rem;
+}
+.button-container{
+  padding:1rem 0.5rem;
+
+}
