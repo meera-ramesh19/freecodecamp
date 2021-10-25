@@ -1,0 +1,148 @@
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+
+body{
+  background:url('ingredients.jpg') no-repeat fixed center;
+  background-size:cover;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.input-container{
+  text-align:center;
+  margin: 0 auto;
+  margin:5rem 10rem;
+}
+
+.submit{
+  background:#0047ab;
+  padding: 2px 16px;
+}
+.search-header{
+  text-align:center;
+    margin:0 auto;
+    padding:5rem;
+    color:white;
+}
+  .choices{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction:row;
+      flex-wrap: nowrap;
+
+    }
+
+
+  #mealtype{
+    padding:0.1rem 0.3rem;
+  }
+    .card-container {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      max-width:1024px;
+      margin:0 auto;
+
+
+    }
+
+    .card-wrapper{
+      width:80%;
+      display:block;
+      padding:2rem;
+      background:#fefeff;
+      margin:3rem;
+    }
+    .card-container:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .col {
+      display: flex;
+      justify-content: space-around;
+      align-items: space-around;
+    }
+
+
+    .card-details {
+      display: flex;
+      justify-content:space-between;
+      align-items: space-between;
+    }
+    .card-info{
+      text-align: left;
+      display:block;
+    }
+    .card-image{
+      text-align:right;
+      display:block;
+    }
+
+
+
+
+  .servings-time{
+    display:flex;
+    flex-direction:row;
+  }
+  .time{
+    display:block;
+    text-align:left;
+  }
+  .servings{
+    display:block;
+    text-align:left;
+  }
+  .images{
+    width:500px;
+    height:300px;
+    border:1px solid black;
+    border-radius:10px;
+  }
+  .container {
+   display:flex;
+   flex-direction:row;
+   flex-wrap:wrap;
+   width:90%;
+   padding:1.5rem 0;
+  }
+  .health{
+    text-align:left;
+  }
+
+  .recipe-card__nav{
+    padding-top:2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:space-between;
+
+  }
+  .ingredients{
+    position:relative;
+  }
+  .card-ingredients {
+    position:relative;
+    margin:0;
+    padding:0;
+    column-count: 2;
+    /* column-rule: dotted 1px #333; */
+    padding-left: 130px;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    /* list-style-type: none; */
+    text-align:left;
+  }
+
+  li:before {s
+    content: "•";
+  }
+
+  .ingredients > h4{
+    position:relative;
+    text-align: center;
+  }

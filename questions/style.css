@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap');
+
+.heading{
+  font-family: 'Lobster Two', cursive;
+  color:goldenrod;
+  font-size: 3rem;
+  text-align: center;
+   padding-top:6rem;
+}
