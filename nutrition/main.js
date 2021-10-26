@@ -89,16 +89,16 @@ function showRecipe(meals,healthy,ingredients){
      <div class="card-wrapper">
       <div class="card-details">
         <div class="card-info">
-           <h3 class="card-title">${meal.recipe.label}</h3>
-           <p class="cuisine"><strong>CUISINE:</strong>${meal.recipe.cuisineType}</p>
-           <p class="cuisine">SOurce:${meal.recipe.source}</p>
-           <p class="cuisine">Type of dish:${meal.recipe.dishType}</p>
-           <p class="cuisine">Total Calories:${ meal.recipe.calories.toFixed(2)}</p>
-           <p class="time">Total time:${meal.recipe.totalTime}</p>
-           <p class="servings">Servings:${meal.recipe.yield}</p>
+           <h3 class="card-title">${meals.recipe.label}</h3>
+           <p class="cuisine"><strong>CUISINE:</strong>${meals.recipe.cuisineType}</p>
+           <p class="cuisine">SOurce:${meals.recipe.source}</p>
+           <p class="cuisine">Type of dish:${meals.recipe.dishType}</p>
+           <p class="cuisine">Total Calories:${ meals.recipe.calories.toFixed(2)}</p>
+           <p class="time">Total time:${meals.recipe.totalTime}</p>
+           <p class="servings">Servings:${meals.recipe.yield}</p>
          </div>
           <div class="card-image">
-            <img class="images" src="${meal.recipe.image}" alt="Avatar" style="width:100%">
+            <img class="images" src="${meals.recipe.image}" alt="Avatar" style="width:100%">
           </div>
         </div>
 
@@ -114,68 +114,54 @@ function showRecipe(meals,healthy,ingredients){
          </div>
         </div>
         <div class="recipe-card__nav">
-        <a href="#" onclick="nutritionValues()">click1</a>
-        <a href="${meal.recipe.url}" target="_blank" class="btn btn-primary getRecipe">Click for full recipe</a>
+          <a href="#" class="btn btn-primary" id="${meals.recipe.label}">Nutrition Info</a>
+        <a href="${meals.recipe.url}" target="_blank" class="btn btn-primary getRecipe">Click for full recipe</a>
        </div>
    </div>
       </div>
     ` )
 
 
-  //
-
-
-document.querySelector('#getNutrition').addEventListener('click', nutritionValues);
 
 
 
 
+        document.getElementById(meals.recipe.label).addEventListener('click', function() {
+           console.log(meals.recipe.label, ingredients)
+           nutritionalLabels(meals.recipe.label, ingredients);
 
-}
+        });
 
 
- function nutritionValues() {
-   console.log("meals")
- }
+        }
 
-//
-// <div class="entireContainer">
-//  <div class="card">
-//    <div class="leftContainer">
-//        <div class="profile-main">
-//            <h2 class="profile-name">${meal.recipe.label}</h2>
-//            <p class="profile-position"><strong>Cuisine:</strong>${meal.recipe.cuisineType}</p>
-//            <p class="profile-position"><strong>Type of Dish:</strong> ${meal.recipe.dishType}</p>
-//            <p class="profile-position"><strong>Source:</strong>${meal.recipe.source}</p>
-//            <p class="profile-position"><strong>Total Calories:</strong>${meal.recipe.calories.toFixed(2)}</p>
-//            <ul class="recipe-card__nav">
-//            <a href="${meal.recipe.url}" target="_blank" class="btn btn-primary getRecipe">Click for full recipe</a>
-//
-//        </ul>
-//        </div>
-//    </div>
-//    <div class="rightContainer">
-//      <div class="profile-sidebar">
-//          <img class="profile-image" src="${meal.recipe.image}"  onerror="this.onerror=null;this.src='../images/plate.jpg';" width=70% alt="recipe image">
-//
-//
-//       </div>
-//    </div>
-//    <div class"bottomContainer">
-//     <h3 class="healthHeader">Health Labels:</h3>
-//       <div class="recipe-card__health">
-//
-//           ${healthy.map(health => `<span>${health}</span>`).join(',')}
-//
-//        </div>
-//     <h3 class="ingredientsHeader">Ingredients:</h3>
-//       <div class="recipe-card__ingredients">
-//
-//           ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-//
-//        </div>
-//     </div>
-//
-//
-//
-//      </div>
+
+
+
+        async function nutritionalLabels(label, ingrList) {
+          console.log(label,ingrList);
+          document.querySelector('#showNutrition').innerHTML='';
+
+
+         try{
+                 const nutritionItem=await fetch("https://api.edamam.com/api/nutrition-details/?",
+          {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+               "app_id":"3fbb56a0",
+               "app_key":"7c1f1da42c85743aabd55887e22ca4aa",
+             },
+            body:{  "title":`${label}`,
+              "ingr":[`${ingrList}`],
+          }
+
+          });
+                 // const nutritionItem = await fetch(url2)
+                 console.log(nutritionItem);
+                 const nutritionItemData = await nutritionItem.json()
+                 console.log(nutritionItemData);
+           }catch(err){
+             console.log('err2',err);
+           };
+         }
