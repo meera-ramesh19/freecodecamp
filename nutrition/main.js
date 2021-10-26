@@ -78,6 +78,12 @@ const createIngredients = (meal) => {
       }
   }
 
+
+  showRecipe(meal,healthy,ingredients)
+}
+
+function showRecipe(meals,healthy,ingredients){
+
   document.querySelector("#showRecipe").insertAdjacentHTML("beforeend",`
    <div class="card-container">
      <div class="card-wrapper">
@@ -108,7 +114,7 @@ const createIngredients = (meal) => {
          </div>
         </div>
         <div class="recipe-card__nav">
-        <button  onclick="nutritionValues" class="btn btn-primary getNutrition"> Nutrition Labels</button>
+        <a href="#" onclick="nutritionValues()">click1</a>
         <a href="${meal.recipe.url}" target="_blank" class="btn btn-primary getRecipe">Click for full recipe</a>
        </div>
    </div>
@@ -119,14 +125,19 @@ const createIngredients = (meal) => {
   //
 
 
-document.querySelector('.getNutrition').addEventListener('click', nutritionValues);
+document.querySelector('#getNutrition').addEventListener('click', nutritionValues);
 
- function nutritionValues(){
-    console.log("inside nutrition")
+
+
+
+
 }
 
 
-}
+ function nutritionValues() {
+   console.log("meals")
+ }
+
 //
 // <div class="entireContainer">
 //  <div class="card">
